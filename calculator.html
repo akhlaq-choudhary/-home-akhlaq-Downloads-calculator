@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html onkeypress="mykey(event)">
+<head>
+	<title>my first calculator</title>
+</head>
+<style type="text/css">
+ body {
+ 	background: #23FA79;
+ }
+table {
+	margin-left: auto; 
+margin-right: auto; 
+width: 200px;
+border: 3px solid #B1CED9;
+background: #7AE2DC;
+}
+
+	td {
+		border-spacing: 10px;
+	}
+	#displayer {
+		margin-left: auto;
+margin-right:auto;
+		width: 290px; 
+		height: 50px;
+		border: 3px solid ;
+		background: #20C1F3;
+	font-size: 50px;
+	overflow: auto;
+	padding: 12px;
+	}
+	button {
+		width: 100px;
+		height: 50px;
+	font-size: 2rem;
+	background: #1B3BC2;
+	}
+	p {
+		text-align: center;
+	}
+</style>
+<body onkeypress="backspace(event)">
+<p>press c to clear the output</p>
+<table>
+	<tr>
+		<div id="displayer">
+</div>
+	</tr>
+	<tr>
+		<td ><button id="1">1</button></td>
+		<td ><button id="2">2</button></td>
+		<td ><button id="3">3</button></td>
+	</tr>
+	<tr>
+		<td ><button id="4">4</button></td>
+		<td ><button id="5">5</button></td>
+		<td ><button id="6">6</button></td>
+	</tr>
+	<tr>
+		<td ><button id="7">7</button></td>
+		<td ><button id="8">8</button></td>
+		<td ><button id="9">9</button></td>
+	</tr>
+	<tr>
+		<td ><button id="0">0</button></td>
+		<td ><button id="dot">.</button></td>
+		<td ><button id="plus">+</button></td>
+	</tr>
+	<tr>
+		<td ><button id="minus">-</button></td>
+		<td ><button id="equal">=</button></td>
+		<td><button id="clear">C</button></td>
+	</tr>
+</table>
+	<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>
