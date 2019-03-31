@@ -23,11 +23,11 @@ displayer.innerHTML += "+";
 var equal = document.getElementById("equal");
 equal.addEventListener("click",function() {
 	try {
-display.innerHTML = eval(display.innerHTML); 
+display.innerHTML = eval(String(display.innerHTML)); 
 	display.innerHTML;
 }
 catch(e) {
-	display.innerHTML = e.message;
+	display.innerHTML = invalid;
 } 
 });
 var minus = document.getElementById("minus");
@@ -47,7 +47,7 @@ display.innerHTML += String.fromCharCode(c);
 
 }
 else if (key == 13 || key == 61) {
-	display.innerHTML = eval(display.innerHTML);
+	display.innerHTML = eval(String(display.innerHTML));
 }
 }
 var clear = document.getElementById("clear");
