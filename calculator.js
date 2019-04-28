@@ -54,3 +54,15 @@ var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
 })
+var multiply = document.getElementById("multiply");
+multiply.addEventListener("click",function() {
+display.innerHTML = "*";
+});
+var divide = document.getElementById("divide");
+divide.addEventListener("click",function() {
+display.innerHTML = "/";
+});
+var ac = document.getElementById("ac");
+ac.addEventListener("click",function() {
+display.innerHTML = "";
+});
