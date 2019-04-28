@@ -17,7 +17,7 @@ var key = event.keyCode || event.which;
 display.innerHTML = null;
 	}
 }
-window.addEventListener("keypress",allclear(event));
+window.document.addEventListener("keypress",allclear(event));
 var plus = document.getElementById("plus");
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
@@ -52,7 +52,7 @@ else if (key == 13 || key == 61) {
 	display.innerHTML = eval(String(display.innerHTML));
 }
 }
-window.addEventListener("keypress",mykey(event));
+window.document.addEventListener("keypress",mykey(event));
 var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
