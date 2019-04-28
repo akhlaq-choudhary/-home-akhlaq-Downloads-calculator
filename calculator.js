@@ -1,4 +1,4 @@
-var body = document.getElementsByTagName("body");
+
 var display = document.getElementById("displayer");
 	var  button = new Array()
 for (let i = 0; i < 10;i++ ) {
@@ -11,13 +11,13 @@ myfun= () => {
 for (var j = 0; j < 10;j++) {
 button[j].onclick = myfun;
 }
-function clear(event) {
-var key = event.keyCode;
+function allclear(event) {
+var key = event.keyCode || event.which;
 	if (key == "99") {
 display.innerHTML = null;
 	}
 }
-body[0].onkeypress = clear(event);
+window.addEventListener("keypress",allclear(event));
 var plus = document.getElementById("plus");
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
@@ -52,6 +52,7 @@ else if (key == 13 || key == 61) {
 	display.innerHTML = eval(String(display.innerHTML));
 }
 }
+window.addEventListener("keypress",mykey(event));
 var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
