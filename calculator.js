@@ -1,5 +1,5 @@
 
-var display = document.getElementById("displayer");
+var display = document.getElementById("displayer"); // displayer number
 	var  button = new Array()
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
@@ -7,6 +7,7 @@ for (let i = 0; i < 10;i++ ) {
 myfun= () => {
 	button = event.target;
 	display.innerHTML += button.innerHTML;
+// function that display button input
 }
 for (var j = 0; j < 10;j++) {
 button[j].onclick = myfun;
@@ -16,28 +17,28 @@ function allclear(event) {
 var key = event.keyCode || event.which;
 	if (key == "99") {
 display.innerHTML = null;
-	}
+	}// clear the displayer
 }
 window.document.addEventListener("keypress",allclear);
-var plus = document.getElementById("plus");
+var plus = document.getElementById("plus"); // plus sign
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
 })
-var equal = document.getElementById("equal");
+var equal = document.getElementById("equal"); // evaluate the number
 equal.addEventListener("click",function() {
 	try {
 display.innerHTML = eval(String(display.innerHTML)); 
 	display.innerHTML;
 }
 catch(e) {
-	display.innerHTML = invalid;
+	display.innerHTML = "invalid";
 } 
 });
-var minus = document.getElementById("minus");
+var minus = document.getElementById("minus"); // minus sign
 minus.addEventListener("click",function() {
 	display.innerHTML += "-";
 })
-var dot = document.getElementById("dot");
+var dot = document.getElementById("dot"); // dot sign
 dot.addEventListener("click",function() {
 	display.innerHTML += ".";
 })
@@ -45,11 +46,19 @@ function mykey(event) {
 var key = event.keyCode || event.which;
 	for(var c = 43;c < 58;c++)
 if (key == c) {
+	
 display.innerHTML += String.fromCharCode(c);
 
 }
 else if (key == 13 || key == 61) {
-	display.innerHTML = eval(String(display.innerHTML));
+	// evaluate if press enter or equal
+	try {
+display.innerHTML = eval(String(display.innerHTML)); 
+	display.innerHTML;
+}
+catch(e) {
+	display.innerHTML = "invalid";
+}
 }
 }
 window.document.addEventListener("keypress",mykey);
