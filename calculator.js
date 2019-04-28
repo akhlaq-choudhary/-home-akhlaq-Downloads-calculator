@@ -3,19 +3,20 @@ var display = document.getElementById("displayer");
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
 }
-myfun= () => {
+var myfun= () => {
 	button = event.target;
 	display.innerHTML += button.innerHTML;
 }
 for (var j = 0; j < 10;j++) {
 button[j].onclick = myfun;
 }
-function backspace(event) {
+function clear(event) {
 var key = event.keyCode;
 	if (key == "99") {
 display.innerHTML = null;
 	}
 }
+document.body.onkeypress = clear();
 var plus = document.getElementById("plus");
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
@@ -50,6 +51,7 @@ else if (key == 13 || key == 61) {
 	display.innerHTML = eval(String(display.innerHTML));
 }
 }
+document.body.onkeypress = mykey();
 var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
