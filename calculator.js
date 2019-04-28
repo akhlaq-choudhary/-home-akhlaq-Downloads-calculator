@@ -11,8 +11,9 @@ myfun= () => {
 for (var j = 0; j < 10;j++) {
 button[j].onclick = myfun;
 }
-var key = event.keyCode || event.which;
+
 function allclear(event) {
+var key = event.keyCode || event.which;
 	if (key == "99") {
 display.innerHTML = null;
 	}
@@ -41,7 +42,8 @@ dot.addEventListener("click",function() {
 	display.innerHTML += ".";
 })
 function mykey(event) {
-for(var c = 43;c < 58;c++)
+var key = event.keyCode || event.which;
+	for(var c = 43;c < 58;c++)
 if (key == c) {
 display.innerHTML += String.fromCharCode(c);
 
