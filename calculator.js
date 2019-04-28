@@ -1,3 +1,4 @@
+var body = document.getElementsByTagName("body");
 var display = document.getElementById("displayer");
 	var  button = new Array()
 for (let i = 0; i < 10;i++ ) {
@@ -16,6 +17,7 @@ var key = event.keyCode;
 display.innerHTML = null;
 	}
 }
+body[0].onkeypress = clear(event);
 var plus = document.getElementById("plus");
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
