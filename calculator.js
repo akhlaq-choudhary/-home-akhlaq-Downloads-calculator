@@ -3,7 +3,7 @@ var display = document.getElementById("displayer");
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
 }
-var myfun= () => {
+myfun= () => {
 	button = event.target;
 	display.innerHTML += button.innerHTML;
 }
@@ -16,7 +16,6 @@ var key = event.keyCode;
 display.innerHTML = null;
 	}
 }
-document.body.onkeypress = clear(event);
 var plus = document.getElementById("plus");
 plus.addEventListener("click",function() {
 displayer.innerHTML += "+";
@@ -51,7 +50,6 @@ else if (key == 13 || key == 61) {
 	display.innerHTML = eval(String(display.innerHTML));
 }
 }
-document.body.onkeypress = mykey(event);
 var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
