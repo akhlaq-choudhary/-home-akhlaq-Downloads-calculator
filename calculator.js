@@ -26,8 +26,8 @@ displayer.innerHTML += "+";
 })
 var equal = document.getElementById("equal"); // evaluate the number
 equal.addEventListener("click",function() {
+display.innerHTML = eval(String(display.innerHTML));
 	try {
-display.innerHTML = eval(String(display.innerHTML)); 
 	display.innerHTML;
 }
 catch(e) {
@@ -52,8 +52,9 @@ display.innerHTML += String.fromCharCode(c);
 }
 else if (key == 13 || key == 61) {
 	// evaluate if press enter or equal
+display.innerHTML = eval(String(display.innerHTML));
 	try {
-display.innerHTML = eval(String(display.innerHTML)); 
+ 
 	display.innerHTML;
 }
 catch(e) {
