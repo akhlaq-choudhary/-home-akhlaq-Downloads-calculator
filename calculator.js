@@ -56,11 +56,11 @@ clear.addEventListener("click",function() {
 })
 var multiply = document.getElementById("multiply");
 multiply.addEventListener("click",function() {
-display.innerHTML = "*";
+display.innerHTML += "*";
 });
 var divide = document.getElementById("divide");
 divide.addEventListener("click",function() {
-display.innerHTML = "/";
+display.innerHTML += "/";
 });
 var ac = document.getElementById("ac");
 ac.addEventListener("click",function() {
