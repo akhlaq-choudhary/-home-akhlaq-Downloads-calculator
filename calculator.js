@@ -26,12 +26,12 @@ displayer.innerHTML += "+";
 })
 var equal = document.getElementById("equal"); // evaluate the number
 equal.addEventListener("click",function() {
-display.innerHTML = eval(String(display.innerHTML));
 	try {
+		display.innerHTML = eval(String(display.innerHTML));
 	display.innerHTML;
 }
 catch(e) {
-	display.innerHTML = "invalid";
+	display.innerHTML = e.message;
 } 
 });
 var minus = document.getElementById("minus"); // minus sign
