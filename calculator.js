@@ -44,7 +44,7 @@ dot.addEventListener("click",function() {
 })
 function mykey(event) {
 var key = event.keyCode || event.which;
-	for(var c = 43;c < 58;c++)
+	for(var c = 42;c < 58;c++)
 if (key == c) {
 	
 display.innerHTML += String.fromCharCode(c);
