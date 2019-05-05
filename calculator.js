@@ -60,6 +60,9 @@ catch(e) {
 	display.innerHTML = e.message;
 }
 }
+else if (key == 112) {
+	display.innerHTML = String(Math.PI);
+}
 }
 window.document.addEventListener("keypress",keyboard);
 var clear = document.getElementById("clear");
