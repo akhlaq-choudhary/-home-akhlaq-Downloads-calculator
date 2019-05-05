@@ -42,7 +42,7 @@ var dot = document.getElementById("dot"); // dot sign
 dot.addEventListener("click",function() {
 	display.innerHTML += ".";
 })
-function mykey(event) {
+function keyboard(event) {
 var key = event.keyCode || event.which;
 	for(var c = 42;c < 58;c++)
 if (key === c) {
@@ -61,7 +61,7 @@ catch(e) {
 }
 }
 }
-window.document.addEventListener("keypress",mykey);
+window.document.addEventListener("keypress",keyboard);
 var clear = document.getElementById("clear");
 clear.addEventListener("click",function() {
 	display.innerHTML = display.innerHTML.slice(0,-1);
