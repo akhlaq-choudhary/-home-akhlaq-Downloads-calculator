@@ -15,7 +15,7 @@ button[j].onclick = myfun;
 
 function allclear(event) {
 var key = event.keyCode || event.which;
-	if (key == "99") {
+	if (key === 99) {
 display.innerHTML = null;
 	}// clear the displayer
 }
@@ -45,12 +45,12 @@ dot.addEventListener("click",function() {
 function mykey(event) {
 var key = event.keyCode || event.which;
 	for(var c = 42;c < 58;c++)
-if (key == c) {
+if (key === c) {
 	
 display.innerHTML += String.fromCharCode(c);
 
 }
-else if (key == 13 || key == 61) {
+else if (key === 13 || key === 61) {
 	// evaluate if press enter or equal
 	try {
  display.innerHTML = eval(String(display.innerHTML));
@@ -80,7 +80,7 @@ display.innerHTML = "";
 });
 window.addEventListener("keydown",function(e) {
 mykeycode = e.keyCode;
-	if (mykeycode == 8) {
+	if (mykeycode === 8) {
 	display.innerHTML = display.innerHTML.slice(0,-1);
 	}
 });// now you can clear one number at a time
