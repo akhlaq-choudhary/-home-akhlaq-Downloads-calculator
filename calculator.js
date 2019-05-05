@@ -90,6 +90,6 @@ pi.addEventListener("click",function() {
 display.innerHTML += String(Math.PI);
 })
 var leftbrac = document.getElementById("leftbracket");
-leftbrac.addEventListener("click",function(eve) {display.innerHTML += leftbrac.textContent});
+leftbrac.addEventListener("click",function() {display.innerHTML += leftbrac.textContent});
 var rightbrac = document.getElementById('rightbracket');
-rightbrac.addEventListener("click",function(eve) {display.innerHTML += rightbrac.textContent})
+rightbrac.addEventListener("click",function() {display.innerHTML += rightbrac.textContent})
