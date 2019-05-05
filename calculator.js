@@ -78,3 +78,9 @@ var ac = document.getElementById("ac");
 ac.addEventListener("click",function() {
 display.innerHTML = "";
 });
+window.addEventListener("keydown",function(e) {
+mykeycode = e.keyCode;
+	if (mykeycode == 8) {
+	display.innerHTML = display.innerHTML.slice(0,-1);
+	}
+});// now you can clear one number at a time
