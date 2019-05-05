@@ -44,7 +44,7 @@ dot.addEventListener("click",function() {
 })
 function keyboard(event) {
 var key = event.keyCode || event.which;
-	for(var c = 42;c < 58;c++)
+	for(var c = 40;c < 58;c++)
 if (key === c) {
 	
 display.innerHTML += String.fromCharCode(c);
@@ -84,3 +84,12 @@ mykeycode = e.keyCode;
 	display.innerHTML = display.innerHTML.slice(0,-1);
 	}
 });// now you can clear one number at a time
+let pi = document.getElementById("pi");
+
+pi.addEventListener("click",function() {
+display.innerHTML += String(Math.PI);
+})
+var leftbrac = document.getElementById("leftbracket");
+leftbrac.addEventListener("click",function(eve) {display.innerHTML += leftbrac.textContent});
+var rightbrac = document.getElementById('rightbracket');
+rightbrac.addEventListener("click",function(eve) {display.innerHTML += rightbrac.textContent})
