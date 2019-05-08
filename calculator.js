@@ -26,13 +26,13 @@ displayer.innerHTML += "+";
 })
 var equal = document.getElementById("equal"); // evaluate the number
 equal.addEventListener("click",function() {
-	try {
-		display.innerHTML = eval(String(display.innerHTML));
-	display.innerHTML;
+try {
+display.innerHTML = eval(String(display.innerText.replace(/,/g,'')));
+display.innerHTML = Number(display.innerText).toLocaleString();
 }
 catch(e) {
 	display.innerHTML = e.message;
-} 
+}
 });
 var minus = document.getElementById("minus"); // minus sign
 minus.addEventListener("click",function() {
@@ -52,9 +52,9 @@ display.innerHTML += String.fromCharCode(c);
 }
 else if (key === 13 || key === 61) {
 	// evaluate if press enter or equal
-	try {
- display.innerHTML = eval(String(display.innerHTML));
-	display.innerHTML;
+try {
+display.innerHTML = eval(String(display.innerText.replace(/,/g,'')));
+display.innerHTML = Number(display.innerText).toLocaleString();
 }
 catch(e) {
 	display.innerHTML = e.message;
