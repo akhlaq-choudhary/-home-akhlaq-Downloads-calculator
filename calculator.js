@@ -27,7 +27,9 @@ var equal = document.getElementById("equal"); // evaluate the number
 equal.addEventListener("click",function() {
 try {
 display.innerHTML = eval(String(display.innerText.replace(/,/g,'')));
-display.innerHTML = Number(display.innerText).toLocaleString();
+if (Number(display.innerHTML > 99)) {
+	display.innerHTML = Number(display.innerText).toLocaleString();
+}
 }
 catch(e) {
 	display.innerHTML = e.message;
@@ -53,7 +55,9 @@ else if (key === 13 || key === 61) {
 	// evaluate if press enter or equal
 try {
 display.innerHTML = eval(String(display.innerText.replace(/,/g,'')));
-display.innerHTML = Number(display.innerText).toLocaleString();
+if (Number(display.innerHTML > 999)) {
+	display.innerHTML = Number(display.innerText).toLocaleString();
+}
 }
 catch(e) {
 	display.innerHTML = e.message;
