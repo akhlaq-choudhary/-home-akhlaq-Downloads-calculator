@@ -4,14 +4,13 @@ var display = document.getElementById("displayer"); // displayer number
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
 }
-myfun= () => {
+myfun= (event) => {
 	button = event.target;
 	display.innerHTML += button.innerHTML;
 // function that display button input
 }
-for (var j = 0; j < 10;j++) {
-button[j].onclick = myfun;
-}
+button.forEach(function(num) 
+	{num.onclick = myfun;});
 
 function allclear(event) {
 var key = event.keyCode || event.which;
