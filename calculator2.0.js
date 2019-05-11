@@ -92,3 +92,4 @@ var leftbrac = document.getElementById("leftbracket");
 leftbrac.addEventListener("click",function() {display.value += leftbrac.textContent});
 var rightbrac = document.getElementById('rightbracket');
 rightbrac.addEventListener("click",function() {display.value += rightbrac.textContent})
+window.onclick = function() {display.focus();}
