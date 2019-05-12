@@ -77,12 +77,6 @@ var ac = document.getElementById("ac");
 ac.addEventListener("click",function() {
 display.value = "";
 });
-window.addEventListener("keydown",function(e) {
-mykeycode = e.keyCode;
-	if (mykeycode === 8) {
-	display.value = display.value.slice(0,-1);
-	}
-});// now you can clear one number at a time
 let pi = document.getElementById("pi");
 
 pi.addEventListener("click",function() {
