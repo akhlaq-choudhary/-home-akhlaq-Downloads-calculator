@@ -4,7 +4,7 @@ var display = document.getElementById("displayer"); // displayer number
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
 }
-myfun= (event) => {
+let myfun= event => {
 	button = event.target;
 	display.innerHTML += button.innerHTML;
 // function that display button input
