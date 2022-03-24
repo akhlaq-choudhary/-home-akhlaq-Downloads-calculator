@@ -1,10 +1,10 @@
-
+'use strict';
 var display = document.getElementById("numb"); // displayer number
 	var  button = new Array()
 for (let i = 0; i < 10;i++ ) {
 	button[i] = document.getElementById(String(i));
 }
-myfun= (event) => {
+let myfun= event => {
 	button = event.target;
 	display.value += button.innerHTML;
 }
